@@ -58,7 +58,7 @@ public class ${entity} {
 
     <#if field.comment!?length gt 0>
         <#if swagger>
-    @Schema(description = "${field.comment}")
+    @Schema(description = "${field.comment}", title = "${field.comment}")
         <#else>
     /**
      * ${field.comment}

@@ -7,7 +7,7 @@ import com.baomidou.mybatisplus.generator.engine.FreemarkerTemplateEngine;
 
 import java.util.*;
 
-public class  CustomTemplatesGenerator {
+public class MybatisTemplatesGenerator {
     public static void main(String[] args) {
         // 数据库配置
         // 注意修改数据库名
@@ -90,11 +90,11 @@ public class  CustomTemplatesGenerator {
 
                 // 4. 自定义模版，从 Mybatis Plus Generator 源码包中复制即可。并按照要求修改相关配置
                 .templateConfig(config -> config
-                        .controller("/templates/controller.java")
-                        .entity("/templates/entity.java")
-                        .mapper("/templates/mapper.java")
-                        .service("/templates/service.java")
-                        .serviceImpl("/templates/serviceImpl.java")
+                        .controller("/templates/mybatis/controller.java")
+                        .entity("/templates/mybatis/entity.java")
+                        .mapper("/templates/mybatis/mapper.java")
+                        .service("/templates/mybatis/service.java")
+                        .serviceImpl("/templates/mybatis/serviceImpl.java")
                 )
                 .execute(); // 执行
     }
